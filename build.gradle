@@ -33,7 +33,7 @@ task BuildJar(type: Jar) {
     }
 
     from sourceSets.main.output  // Include compiled classes in the JAR
-    archiveBaseName = 'my-application'  // Name of the JAR file
+    archiveBaseName = 'hellojenkins'  // Name of the JAR file
     destinationDirectory = file('build/libs')  // Output directory for the JAR file
 }
 // Modify the defualt JAR task to include the Main-Class
