@@ -13,7 +13,7 @@ pipeline {
             steps { bat 'start gradlew test'}
         }
         stage('Deploy') {
-            steps { bat 'java -jar build/libs/hellojenkins.jar'}
+            steps { bat 'java -jar build/libs/hellojenkins-1.0.jar'}
         }
     }
 }
