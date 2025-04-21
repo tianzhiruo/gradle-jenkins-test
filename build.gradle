@@ -10,7 +10,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 group = 'com.example'
-version = 'V1'
+version = '1.0'
+
 repositories {
 mavenCentral()
 }
