@@ -42,7 +42,7 @@ jar {
         attributes 'Main-Class': 'com.example.Main' 
     }
     from { sourceSets.main.output }
-    archiveBaseName = 'my-application'
+    archiveBaseName = 'hellojenkins'
     destinationDirectory = file('build/libs')
 }
 // Task to copy resource files to a specific directory
@@ -54,7 +54,7 @@ task copyResources(type: Copy) {
 // Task to create a zip archive of the project
 task createZip(type: Zip) {
     from 'build'
-    archiveFileName = 'project-name.zip'
+    archiveFileName = 'hellojenkins.zip'
     destinationDirectory = file('build/distributions')
 }
 
