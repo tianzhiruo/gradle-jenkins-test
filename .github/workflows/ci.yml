@@ -24,7 +24,7 @@ jobs:
       run: gradle build
 
     - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
         path: build/libs/**
@@ -33,7 +33,7 @@ jobs:
       run: gradle test
 
     - name: Upload Test Reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-reports
         path: build/reports/tests/**
@@ -42,10 +42,10 @@ jobs:
       run: gradle jacocoTestReport
 
     - name: Upload code coverage report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: code-coverage-report
         path: build/reports/jacoco/test/html/**
 
     - name: Run Deployment
-      run: java -jar build/libs/hello-world-java-V1.jar
+      run: java -jar build/libs/hellojenkins-1.0.jar
