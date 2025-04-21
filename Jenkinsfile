@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/nawaf83/hello-worldjava1.git'
+                git branch: 'master', url: 'https://github.com/tianzhiruo/gradle-jenkins-test.git'
             }
         }
         stage('Build') {
@@ -19,16 +19,16 @@ pipeline {
 }
 
 post {
-always {
-echo 'Cleaning up workspace'
-deleteDir() // Clean up the workspace after the build
-}
-success {
-echo 'Build succeeded!!!'
-// You could add notification steps here
-}
-failure {
-echo 'Build failed!'
-// You could add notification steps here
-}
+    always {
+        echo 'Cleaning up workspace'
+        deleteDir() // Clean up the workspace after the build
+    }
+    success {
+        echo 'Build succeeded!!!'
+        // You could add notification steps here
+    }
+    failure {
+        echo 'Build failed!'
+        // You could add notification steps here
+    }
 }
